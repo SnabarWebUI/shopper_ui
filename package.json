@@ -155,6 +155,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
+    "carte-blanche": "^0.2.3",
     "chai": "^3.5.0",
     "chai-enzyme": "^0.4.2",
     "cheerio": "^0.20.0",
