@@ -1,0 +1,26 @@
+.inputBasic {
+
+}
+
+input{
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+.btn {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+
+}
+
+.form-horizontal .control-label{
+  /* text-align:right; */
+  text-align:left;
+  background-color:#ffa;
+}
+
+.form-group {
+  color: #00aaff;
+}

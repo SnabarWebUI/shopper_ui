@@ -12,8 +12,18 @@
  */
 
 import React from 'react';
+import WizardFirstStep from './../../components/WizardFirstStep'
+import WizardThirdStep from './../../components/WizardThirdStep'
+import WizardForthStep from './../../components/WizardForthStep'
+import Form from './../../containers/Form'
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
+  constructor(props){
+    super(props)
+    this.state = {
+      page : 1,
+    }
+  }
 
   static propTypes = {
     children: React.PropTypes.node,
@@ -21,9 +31,11 @@ export default class App extends React.Component { // eslint-disable-line react/
 
   render() {
     return (
-      <div>
-        {this.props.children}
-      </div>
+    <div>
+      <WizardFirstStep handleSubmit={()=>{
+      console.log()
+      }} />
+    </div>
     );
   }
 }
