@@ -16,6 +16,7 @@ import WizardFirstStep from './../../components/WizardFirstStep'
 import WizardThirdStep from './../../components/WizardThirdStep'
 import WizardForthStep from './../../components/WizardForthStep'
 import Form from './../../containers/Form'
+import SampleForm from './../SampleForm'
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props){
@@ -29,13 +30,15 @@ export default class App extends React.Component { // eslint-disable-line react/
     children: React.PropTypes.node,
   };
 
+  handleSubmit(data) {
+    console.log("data is ", data)
+  }
+
   render() {
     return (
-    <div>
-      <WizardFirstStep handleSubmit={()=>{
-      console.log()
+      <WizardFirstStep onSubmit={(data)=>{
+        console.log("Submitted form data : ", data)
       }} />
-    </div>
     );
   }
 }

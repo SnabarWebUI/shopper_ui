@@ -40,7 +40,6 @@ export default function configureStore(initialState = {}, history) {
     System.import('./reducers').then((reducerModule) => {
       const createReducers = reducerModule.default;
       const nextReducers = createReducers(store.asyncReducers);
-
       store.replaceReducer(nextReducers);
     });
   }
