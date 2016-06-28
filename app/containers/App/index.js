@@ -12,11 +12,8 @@
  */
 
 import React from 'react';
-import WizardFirstStep from './../../components/WizardFirstStep'
-import WizardThirdStep from './../../components/WizardThirdStep'
-import WizardForthStep from './../../components/WizardForthStep'
-import Form from './../../containers/Form'
-import SampleForm from './../SampleForm'
+import  WizardStepFirst from './../../components/WizardStepFirst'
+import WizardStepTwo from './../../components/WizardStepTwo'
 
 export default class App extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props){
@@ -36,9 +33,10 @@ export default class App extends React.Component { // eslint-disable-line react/
 
   render() {
     return (
-      <WizardFirstStep onSubmit={(data)=>{
-        console.log("Submitted form data : ", data)
-      }} />
+      <div>
+        <WizardStepFirst onSubmit={data=>console.log(data)}/>
+        <WizardStepTwo onSubmit={data=>console.log(data)}/>
+      </div>
     );
   }
 }

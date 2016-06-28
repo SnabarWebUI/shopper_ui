@@ -12,7 +12,7 @@ class WizardThirdStep extends React.Component {
   render() {
     return (
       <div>
-        <form action="#" className="form-horizontal">
+        <form className="form-horizontal" onSubmit={e=>console.log("submitting")}>
           <legend>Income Tax Details</legend>
           <InputBasic label="Pan No" placeholder="Pan Card No" />
           <InputBasic label="VAT No" placeholder="Vat No" />

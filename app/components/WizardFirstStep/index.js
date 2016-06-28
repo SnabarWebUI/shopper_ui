@@ -14,30 +14,18 @@ class WizardFirstStep extends React.Component {
     const {
       handleSubmit
     } = this.props
+ 
     return (
-      <div>
-        <legend>Personal Info<small>&nbsp; Let us know about you</small></legend>
-        <form className="form-horizontal" onSubmit={data => console.log(data)}>
-        {/* Shop name  */}
-        <Field name="shop_name" component={shop_name => 
+      <form className="form-horizontal" onSubmit={handleSubmit}>
+      <Field name="shop_name" component={shop_name=>
         <div className="form-group">
-            <label className="col-sm-3 control-label">Shop Name</label>
+            <label className="col-sm-3 control-label">Shop name</label>
             <div className="col-sm-9">
-              <input type="text" className="form-control input-sm" placeholder="Shop name" {...shop_name}/>
+              <input type="text" className="form-control input-sm" placeholder={"Enter shop name"} {...shop_name}/>
             </div>
           </div>
-        }  />
-        {/* Shop owner name  */}
-        <Field name="owner_name" component={owner_name=>
-          <div className="form-group">
-            <label className="col-sm-3 control-label">Owner</label>
-            <div className="col-sm-9">
-              <input type="text" className="form-control input-sm" placeholder="Owner Name" {...owner_name}/>
-            </div>
-          </div>
-        } />
-          </form>
-        </div>
+      }/>
+      </form>
     );
   }
 }
